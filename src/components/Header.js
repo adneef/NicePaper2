@@ -11,14 +11,9 @@ import {
 const Header = () => {
   return (
     <div className='navbar'>
-      <Router>
-        <div>
-          <Link to="/"><HomeButton/></Link>
-          <Link to="/Login"><LoginButton/></Link>
-          <Link to="/Register"><RegisterButton/></Link>
-          <Route path="/:id" />
-        </div>
-      </Router>
+      <HomeButton/>
+      <LoginButton/>
+      <RegisterButton/>
     </div>
   )
 }
