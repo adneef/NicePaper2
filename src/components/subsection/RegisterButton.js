@@ -2,7 +2,7 @@ import React from 'react'
 
 const RegisterButton = () => {
   return (
-    <btn><a href='/register'>Register</a></btn>
+    <button>Register</button>
   )
 }
 

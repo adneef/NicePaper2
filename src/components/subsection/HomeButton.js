@@ -2,9 +2,8 @@ import React from 'react'
 
 const HomeButton = () => {
   return (
-    <a href="/">Home</a>
+    <button>Home</button>
   )
 }
-
 
 export default HomeButton
