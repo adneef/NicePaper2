@@ -13,7 +13,7 @@ const Register = () => {
       <input type="text" id="username" name="username" placeholder="username" required/>
       <br/>
       <label htmlFor="password">Password:</label>
-      <input type="password" id="password" minlength="8" maxlength="19" name="password" placeholder="password" required/>
+      <input type="password" id="password" minLength="8" maxLength="19" name="password" placeholder="password" required/>
       <br/>
       <label htmlFor="first_name_1">First First Name:</label>
       <input type="text" id="first_name_1" name="first_name_1" placeholder="1st first name" required/>
