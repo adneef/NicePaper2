@@ -5,7 +5,7 @@ const Profile = ({userInfo}) => {
   return (
   <div>
     <div className="row">
-      <p>Username: {userInfo}</p>
+      <p>Username: {userInfo.username}</p>
       <br/><br/>
     </div>
     <div className="row">
