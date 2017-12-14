@@ -5,6 +5,47 @@ import Header from './components/Header'
 import Main from './components/Main'
 const API = process.env.REACT_APP_API_URL
 
+//potential dummy data
+// {id: 1, username: "adamN", email: "test@gmail.com", first_name_1: "Adam", last_name_1: "Neef", …}
+// account_id
+// :
+// 1
+// created_at
+// :
+// "2017-10-13T15:19:00.407Z"
+// email
+// :
+// "test@gmail.com"
+// first_name_1
+// :
+// "Adam"
+// first_name_2
+// :
+// "Lisa"
+// id
+// :
+// 1
+// last_name_1
+// :
+// "Neef"
+// last_name_2
+// :
+// "the Magnificent"
+// role
+// :
+// 2
+// template_id
+// :
+// 1
+// updated_at
+// :
+// "2017-10-13T15:19:00.407Z"
+// username
+// :
+// "adamN"
+// wedding_date
+// :
+// "2018-07-24T06:00:00.000Z"
 class App extends Component {
 
   constructor(props) {
@@ -12,7 +53,7 @@ class App extends Component {
     this.state = {
       role: 0,
       loggedIn: false,
-      userInfo: null
+      userInfo: 'cheese'
     }
   }
 
