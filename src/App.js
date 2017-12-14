@@ -12,8 +12,7 @@ class App extends Component {
     this.state = {
       role: 0,
       loggedIn: false,
-      schedule: [],
-      userInfo: []
+      userInfo: null
     }
   }
 
@@ -33,7 +32,12 @@ class App extends Component {
         }
     })
     const json = await res.json()
-    console.log(json)
+    this.setState((prevState) => ({
+    userInfo:json,
+    loggedIn: true,
+    role: json.role
+    }))
+    console.log(this.state)
   }
 
   render() {
@@ -41,7 +45,8 @@ class App extends Component {
       <div>
         <Header/>
         <Main
-          logIn={this.logIn}
+          logIn={ this.logIn }
+          userInfo={ this.state.userInfo }
         />
       </div>
     )
