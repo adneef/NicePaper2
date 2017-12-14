@@ -1,13 +1,24 @@
 import React from 'react'
 
-const Login = () => {
+const Login = ({ logIn }) => {
+
+  const getCreds = (e) => {
+    e.preventDefault()
+    console.log(e.target.email.value)
+    console.log(e.target.password.value)
+    const creds = {
+      email: e.target.email.value,
+      password: e.target.password.value
+    }
+    logIn(creds)
+  }
   return (
 
     <div className="center-content">
 
       <h1>Log in to Nice Paper</h1>
 
-      <form id="loginForm" action="" method="post">
+      <form onSubmit={getCreds} id="loginForm" action="" method="post">
         <label htmlFor="email">Email/Username:</label>
         <input type="text" id="email" name="email" placeholder="email/username"/>
         <br/>
