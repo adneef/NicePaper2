@@ -20,6 +20,7 @@ const Main = ({
              return <Login
                { ...routeProps }
                logIn={ logIn }
+               Redirect
               />
             }
             }
@@ -28,7 +29,7 @@ const Main = ({
           <Route path = '/Schedule' render={ routeProps => {
             return <Schedule
               {...routeProps}
-              userInfo={'cheese'}
+              userInfo={userInfo}
             />
             }
           }
