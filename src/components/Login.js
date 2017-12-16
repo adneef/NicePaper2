@@ -4,8 +4,6 @@ const Login = ({ logIn }) => {
 
   const getCreds = (e) => {
     e.preventDefault()
-    console.log(e.target.email.value)
-    console.log(e.target.password.value)
     const creds = {
       email: e.target.email.value,
       password: e.target.password.value

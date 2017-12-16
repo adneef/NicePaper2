@@ -11,8 +11,7 @@ class App extends Component {
     super(props)
     this.state = {
       role: 0,
-      loggedIn: false,
-      userInfo: null
+      userInfo: []
     }
   }
 
@@ -33,11 +32,10 @@ class App extends Component {
     })
     const json = await res.json()
     this.setState((prevState) => ({
-    userInfo:json,
-    loggedIn: true,
+    userInfo:[json],
     role: json.role
     }))
-    console.log(this.state)
+    console.log('state after update in logIn func:', this.state)
   }
 
   render() {
@@ -46,7 +44,7 @@ class App extends Component {
         <Header/>
         <Main
           logIn={ this.logIn }
-          userInfo={ this.state.userInfo }
+          userInfo={ this.state.userInfo[0] }
         />
       </div>
     )
