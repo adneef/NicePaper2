@@ -16,7 +16,7 @@ const Main = ({
       <main>
         <Switch>
           <Route exact path = '/' component={ Splash }/>
-          <Route exact path = '/Login' render={routeProps => {
+          <Route exact path = '/Login' render={ routeProps => {
              return <Login
                { ...routeProps }
                logIn={ logIn }
@@ -28,16 +28,16 @@ const Main = ({
           <Route path = '/Register' component={ Register }/>
           <Route path = '/Schedule' render={ routeProps => {
             return <Schedule
-              {...routeProps}
-              userInfo={userInfo}
+              { ...routeProps }
+              userInfo={ userInfo }
             />
             }
           }
           />
           <Route path = '/Profile' render={ routeProps => {
             return <Profile
-              {...routeProps}
-              userInfo={userInfo}
+              { ...routeProps }
+              userInfo={ userInfo }
             />
             }
           }

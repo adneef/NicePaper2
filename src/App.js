@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import './App.css'
 import Header from './components/Header'
 import Main from './components/Main'
-import Schedule from './components/Schedule'
 const API = process.env.REACT_APP_API_URL
 
 class App extends Component {
@@ -48,9 +47,6 @@ class App extends Component {
         />
       </div>
     )
-    // return (
-    //   <Schedule userInfo={ this.state.userInfo } />
-    // )
   }
 }
 
