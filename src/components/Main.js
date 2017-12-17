@@ -29,7 +29,7 @@ const Main = ({
           <Route path = '/Schedule' render={ routeProps => {
             return <Schedule
               { ...routeProps }
-              userInfo={ userInfo }
+              userInfo={ this.state.userInfo }
             />
             }
           }

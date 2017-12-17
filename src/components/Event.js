@@ -1,12 +1,28 @@
 import React from 'react'
 
 const Event = ({
-  userInfo
+  userInfo,
+  id
 }) => {
   console.log('in event, userInfo is:', userInfo)
   return (
     <div>
-      Event
+      <h5>Event</h5>
+      <p>{ id }</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
   )
 }
