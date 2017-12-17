@@ -13,12 +13,10 @@ const Profile = ({userInfo}) => {
       <br/><br/>
     </div>
     <div className="row">
-      <p>First Name 1: {userInfo.first_name_1}</p>
-      <br/><br/>
-    </div>
-    <div className="row">
-      <p>Last Name 1: {userInfo.last_name_1}</p>
-      <br/><br/>
+        <span>
+          First Name 1: {userInfo.first_name_1}
+          Last Name 1: {userInfo.last_name_1}
+        </span>
     </div>
     <div className="row">
       <p>First Name 2: {userInfo.first_name_2}</p>
