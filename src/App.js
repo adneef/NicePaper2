@@ -10,14 +10,17 @@ class App extends Component {
     super(props)
     this.state = {
       role: 0,
-      userInfo: []
+      userInfo: [],
+      schedule: []
     }
   }
 
-  async componentWillMount() {
+  async componentDidMount() {
+    console.log('componentDidMount')
 
     // const response = await fetch(`${API}`)
   }
+
 
   logIn = async (creds) => {
     console.log('Who am I?', creds)
@@ -30,11 +33,15 @@ class App extends Component {
         }
     })
     const json = await res.json()
-    this.setState((prevState) => ({
+    this.setState(() => ({
     userInfo:[json],
-    role: json.role
+    role: json.role3
     }))
     console.log('state after update in logIn func:', this.state)
+  }
+
+  schedule() {
+    console.log('schedule fn')
   }
 
   render() {
@@ -43,6 +50,7 @@ class App extends Component {
         <Header/>
         <Main
           logIn={ this.logIn }
+          schedule={ this.schedule }
           userInfo={ this.state.userInfo[0] }
         />
       </div>

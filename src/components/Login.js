@@ -1,6 +1,9 @@
 import React from 'react'
 
-const Login = ({ logIn }) => {
+const Login = ({
+  logIn,
+  schedule
+}) => {
 
   const getCreds = (e) => {
     e.preventDefault()
@@ -9,6 +12,7 @@ const Login = ({ logIn }) => {
       password: e.target.password.value
     }
     logIn(creds)
+    schedule()
   }
   return (
 

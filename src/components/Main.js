@@ -8,7 +8,8 @@ import Profile from './Profile'
 
 const Main = ({
   logIn,
-  userInfo
+  userInfo,
+  schedule
   }) => {
     console.log('in main, userInfo is:', userInfo)
 
@@ -20,16 +21,20 @@ const Main = ({
              return <Login
                { ...routeProps }
                logIn={ logIn }
+               schedule={ schedule }
                Redirect
               />
-            }
+              }
             }
           />
           <Route path = '/Register' component={ Register }/>
           <Route path = '/Schedule' render={ routeProps => {
             return <Schedule
               { ...routeProps }
-              userInfo={ this.state.userInfo }
+              userInfo={ userInfo }
+              id={ userInfo.id }
+              email={ userInfo.email }
+              username={ userInfo.username }
             />
             }
           }

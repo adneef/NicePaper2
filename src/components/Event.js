@@ -8,21 +8,7 @@ const Event = ({
   return (
     <div>
       <h5>Event</h5>
-      <p>{ id }</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <p>id: { id }</p>
     </div>
   )
 }
