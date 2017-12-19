@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header'
 import Main from './components/Main'
@@ -17,7 +17,7 @@ class App extends Component {
 
   async componentWillMount() {
 
-    // const response = await fetch(`${API}`)
+    //eventually an example schedule will render from this
   }
 
   logIn = async (creds) => {
@@ -32,10 +32,10 @@ class App extends Component {
     })
     const json = await res.json()
     this.setState((prevState) => ({
-    userInfo:[json],
+    userInfo: [json],
     role: json.role
     }))
-    console.log('state after update in logIn func:', this.state)
+    console.log('state after update in logIn func:', this.state.userInfo)
   }
 
   render() {

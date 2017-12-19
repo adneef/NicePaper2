@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import { Switch, Route, /*Redirect*/ } from 'react-router-dom'
 import Splash from './Splash'
 import Login from './Login'
 import Register from './Register'
