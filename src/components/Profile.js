@@ -12,11 +12,13 @@ class Profile extends React.Component {
 
   edit = (e) => {
     e.preventDefault()
-    console.log(this.props.userInfo)
     this.setState((prevState) => ({
       editing: true
     }))
   }
+
+
+  // currently working here - some issue with recieving the cookie from the backend can't fix at the moment, must work on capstone - ADN 12/19/17
 
   saveChanges = async (e) => {
     e.preventDefault()
@@ -29,10 +31,11 @@ class Profile extends React.Component {
       last_name_2: e.target.last_name_2.value,
       wedding_date: e.target.wedding_date.value,
     }
-    console.log('updatedInfo:', updatedInfo)
+    console.log('JSON.stringify(updatedInfo):', JSON.stringify(updatedInfo))
     const res = await fetch(`${API}/profile/${this.props.userInfo.id}/editprofile`, {
       method: 'PATCH',
-      body: updatedInfo,
+      credentials: 'same-origin',
+      body: JSON.stringify(updatedInfo),
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
@@ -40,7 +43,7 @@ class Profile extends React.Component {
     })
     const json = await res.json()
     console.log(json)
-    this.setState((prevState) => ({
+    this.setState(() => ({
       userInfo: [json],
       editing: false
     }))

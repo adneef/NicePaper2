@@ -24,6 +24,7 @@ class App extends Component {
     console.log('Who am I?', creds)
     const res = await fetch(`${API}/token`, {
       method: 'POST',
+      credentials: 'same-origin',
       body: JSON.stringify(creds),
       headers: {
         'Content-Type': 'application/json',
